@@ -1,0 +1,48 @@
+.product-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  button {
+    width: 190px;
+    height: 40px;
+    border: none;
+    background: white;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3B3B3B;
+    cursor: pointer;
+    border-right: 1px solid #dedede;
+    transition: 0.3s;
+    text-transform: uppercase;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.active {
+      color: #3442b5;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-tabs {
+    overflow-x: auto;
+    justify-content: flex-start;
+    width: 100%;
+
+    button {
+      min-width: 140px;
+      flex-shrink: 0;
+    }
+  }
+}

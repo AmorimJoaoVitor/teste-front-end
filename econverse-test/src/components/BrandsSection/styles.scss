@@ -1,0 +1,58 @@
+.brands-section {
+  margin: 64px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3442b5;
+    margin-bottom: 40px;
+  }
+}
+
+.brands-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.brand-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+  cursor: pointer;
+
+  img {
+    width: 100px;
+    object-fit: contain;
+  }
+
+  &:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+}
+
+@media (max-width: 768px) {
+  .brand-circle {
+    width: 140px;
+    height: 140px;
+
+    img {
+      width: 80px;
+    }
+  }
+
+  .brands-grid {
+    gap: 20px;
+  }
+}
